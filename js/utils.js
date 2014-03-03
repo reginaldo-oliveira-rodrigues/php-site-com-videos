@@ -25,9 +25,7 @@ function criar_elemento(elemento){
 }
 
 function caregar_video(link_do_video, painel_do_video, fonte_do_video){
-	if(contem_expressao( "wmv", link_do_video ) ){
-		fonte_do_video.attr( "type",  "video/wmv");
-	}else if(contem_expressao( "ogg", link_do_video ) ){
+	if(contem_expressao( "ogg", link_do_video ) ){
 		fonte_do_video.attr( "type",  "video/ogg");
 	}else{
 		fonte_do_video.attr( "type",  "video/mp4");
@@ -36,10 +34,24 @@ function caregar_video(link_do_video, painel_do_video, fonte_do_video){
 	painel_do_video.load();
 }
 
+function caregar_video_em_formato_fechado(url_proximo_video, objeto_video, fonte_do_objeto_video){
+	var tipo_do_video = "video/x-ms-wmv";
+	if( contem_expressao( ".mov", url_proximo_video ) ){
+		tipo_do_video = "video/quicktime";
+	}
+	objeto_video.attr("type", tipo_do_video);
+	objeto_video.attr("data", url_proximo_video);
+	fonte_do_objeto_video.val(url_proximo_video);
+	objeto_video.load();
+}
 
 // funcoes para avaliar texto ou valores
 function contem_expressao( expressao, texto ){
 	return (texto.indexOf(expressao) != -1);
+}
+
+function estah_definido(elemento){
+	return elemento != undefined;
 }
 
 function hasvalue(element) {
