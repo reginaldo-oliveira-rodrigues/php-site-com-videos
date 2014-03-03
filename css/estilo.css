@@ -1,0 +1,22 @@
+h1{font-family:Comic Sans MS,Impact,Tahoma,Verdana,Arial;}
+
+.no-meio{ text-align:center; }
+.flutuar-a-esquerda{ float: left; }
+
+.tamanho-das-setas{ width: 5em; height: 5em; }
+.estilo-das-setas{ fill:transparent; stroke:grey; stroke-width:0.2em; }
+
+.cantos-arrendondados{ border-radius: 3em; }
+
+.painel-do-meio{
+	background-color:#a4b2b4;
+	width:63.4em;
+	height:50em;
+	margin-left:0.5em;
+	margin-right:0.5em;
+	float:left;
+}
+
+.video-tela-media{ width:54em; height:34em; }
+
+.degrade{ 	background: radial-gradient( #b60033, #110024, #090012  ); }
