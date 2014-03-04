@@ -63,8 +63,6 @@ function get_anterior_ou_ultimo( links_de_videos ){
 
 function trocar_video_fechado(url_proximo_video){
 	player_comum.fadeOut("fast");
-	
-	//caregar_video( url_proximo_video, $("#video-web"), $("#fonte-do-video") );
 	caregar_video_em_formato_fechado( url_proximo_video,  video, fonte_do_objeto_video );
 	player_comum.fadeIn("slow");
 }
