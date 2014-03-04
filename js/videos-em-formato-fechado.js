@@ -23,7 +23,6 @@ function configurar_cliques_nas_setas(){
 	seta_direita.click(function(evento){
 		evento.preventDefault();
 		var url_proximo_video = get_proximo_ou_primeiro( links_de_videos );
-		//caregar_video_em_formato_fechado( url_proximo_video,  video, fonte_do_objeto_video );
 		trocar_video_fechado(url_proximo_video);
 	});
 	
